@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +37,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    /* Se elimina el ancho fijo */
+    width: 300px; 
     margin-bottom: 20px;
 }
 
@@ -86,7 +85,7 @@ body {
 }
 
 #btn-equal {
-    background-color: #4CAF50; /* Un verde sólido y amigable */
+    background-color: #4CAF50;
     color: white;
     font-weight: bold;
     border-color: #4CAF50;
@@ -108,4 +107,27 @@ body {
     font-size: 0.9em;
     color: #888;
     margin-top: 10px;
+}
+
+/* --- Media Query para pantallas pequeñas --- */
+@media (max-width: 400px) {
+    .calculadora {
+        /* Se usa un ancho relativo para que se ajuste */
+        width: 90%;
+        padding: 15px;
+    }
+
+    .pantalla {
+        font-size: 1.5rem;
+        height: 50px;
+    }
+
+    .boton {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .header-info h1 {
+        font-size: 2em;
+    }
 }
