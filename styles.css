@@ -1,4 +1,5 @@
-/* Estilos básicos */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,42 +7,56 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #121212;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #00f1c7;
-    overflow: hidden;
+    min-height: 100vh;
+    color: #333;
     text-align: center;
 }
 
+.header-info {
+    margin-bottom: 20px;
+}
+
+.header-info h1 {
+    font-size: 2.5em;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.header-info p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
 .calculadora {
-    background: linear-gradient(135deg, #1f1f1f, #262626);
+    background-color: #fff;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), 0 0 15px rgba(255, 0, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 20px;
 }
 
 .pantalla {
     width: 100%;
     height: 60px;
-    background-color: #333;
-    border: 1px solid #00f1c7;
-    border-radius: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 2rem;
-    color: #00f1c7;
+    color: #333;
     padding: 10px;
     margin-bottom: 15px;
     text-align: right;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo de los botones */
 .botones {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -51,46 +66,46 @@ body {
 .boton {
     font-size: 1.5rem;
     padding: 20px;
-    background-color: #1e1e1e;
-    border: 1px solid #00f1c7;
-    border-radius: 10px;
-    color: #00f1c7;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .boton:hover {
-    background-color: #00f1c7;
-    color: #121212;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+    background-color: #d0d0d0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .boton:active {
-    background-color: #ff007f;
-    color: #121212;
-    box-shadow: 0 0 20px rgba(255, 0, 255, 1);
+    background-color: #c0c0c0;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.boton:focus {
-    outline: none;
+#btn-equal {
+    background-color: #4CAF50; /* Un verde sólido y amigable */
+    color: white;
+    font-weight: bold;
+    border-color: #4CAF50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Animaciones de fondo */
-@keyframes neonGlow {
-    0% {
-        text-shadow: 0 0 5px #00f1c7, 0 0 10px #00f1c7, 0 0 15px #00f1c7, 0 0 20px #00f1c7;
-    }
-    50% {
-        text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f;
-    }
-    100% {
-        text-shadow: 0 0 5px #00f1c7, 0 0 10px #00f1c7, 0 0 15px #00f1c7, 0 0 20px #00f1c7;
-    }
+#btn-equal:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
-h1 {
-    font-size: 3rem;
-    color: #ff007f;
-    animation: neonGlow 1.5s ease-in-out infinite alternate;
+#btn-equal:active {
+    background-color: #3d8b3d;
+    transform: scale(1);
+}
+
+.footer-info {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 10px;
 }
